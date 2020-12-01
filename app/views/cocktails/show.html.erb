@@ -3,17 +3,20 @@
                  alt: "1988 movie Cocktail logo",
                  width: 96 %>
   <div>
-    <%= link_to "Add new cocktail",
-                new_cocktail_path,
+    <%= link_to "Add ingredient",
+                new_cocktail_dose_path(@cocktail),
                 class: "mr-4 btn btn-main"%>
-    <%= link_to "Home",
-                root_path,
+    <%= link_to "Browse cocktails",
+                cocktails_path,
                 class: "btn btn-main"%>
   </div>
 </div>
 
 <div class="container">
   <h1><%= @cocktail.name %></h1>
+  <% if @cocktail.photo.attached? %>
+    <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
   <ul>
     <% @cocktail.doses.each do |dose| %>
     <li>
@@ -25,7 +28,4 @@
     </li>
     <% end %>
   </ul>
-  <hr>
-  <%= link_to "Add ingredient", new_cocktail_dose_path(@cocktail) %>
-  <%= link_to "View all cocktails", cocktails_path %>
 </div>
