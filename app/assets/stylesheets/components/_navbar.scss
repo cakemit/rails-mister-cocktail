@@ -1,12 +1,18 @@
 .navbar-lewagon {
+  display: flex;
   justify-content: space-between;
-  background: white;
+  align-items: center;
+  background: $blue;
+  padding: 15px;
+
+  .navbar-brand {
+    img {
+      vertical-align: middle;
+    }
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
