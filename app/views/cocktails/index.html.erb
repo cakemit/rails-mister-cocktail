@@ -19,12 +19,9 @@
         <%= link_to cocktail.name, cocktail_path(cocktail) %>
       </div>
     <% else %>
-      <div class="card-cocktail">
+      <div class="card-cocktail" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_tag "cocktail-placeholder.jpg", height: 300, width: 400, crop: :fill %>')">
         <%= link_to cocktail.name, cocktail_path(cocktail) %>
       </div>
     <% end %>
   <% end %>
 </div>
-
-<%# <%= cl_image_tag("ztgem5zazdaly5hpwrry",
-      width: 400, height: 300, crop: :scale) %> 

@@ -1,6 +1,15 @@
 .banner {
-  background-image: asset-url('cocktail-movie.jpg');
   background-size: contain;
   background-position: center;
-  padding: 350px 0;
+}
+.banner-cocktail {
+  background-size: cover;
+  background-position: bottom;
+  height: 400px;
+
+  h1 {
+    color: whitesmoke;
+    text-shadow: 1px 1px 2px gray;
+    font-weight: bold;
+  }
 }

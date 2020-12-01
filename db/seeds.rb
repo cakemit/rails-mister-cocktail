@@ -59,7 +59,6 @@ cocktail_names = [
   "Pisco Sour",
   "Caipiroska",
   "Bloody Mary",
-  "Sex on the beach",
   "Piña Colada",
   "Spritz",
   "White Russian",
