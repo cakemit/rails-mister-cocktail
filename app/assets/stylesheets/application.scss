@@ -11,3 +11,14 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+// CSS style changes for TAGS ONLY
+a {
+  text-decoration: none;
+  color: whitesmoke;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

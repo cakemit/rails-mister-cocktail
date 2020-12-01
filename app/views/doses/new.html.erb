@@ -1,3 +1,17 @@
+<div class="navbar-lewagon">
+  <%= image_tag "Cocktail-1988-movie-logo.png",
+                 alt: "1988 movie Cocktail logo",
+                 width: 96 %>
+  <div>
+    <%= link_to "Add new cocktail",
+                new_cocktail_path,
+                class: "mr-4 btn btn-main"%>
+    <%= link_to "Home",
+                root_path,
+                class: "btn btn-main"%>
+  </div>
+</div>
+
 <div class="container">
   <h1><%= @cocktail.name %></h1>
   <%= simple_form_for [@cocktail, @dose] do |f| %>

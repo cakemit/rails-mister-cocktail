@@ -1,12 +1,19 @@
 <div class="navbar-lewagon">
-  <%= image_tag "Cocktail-1988-movie-logo.png", alt: "1988 movie Cocktail logo", width: 96 %>
-  <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-main"%>
+  <%= image_tag "Cocktail-1988-movie-logo.png",
+                 alt: "1988 movie Cocktail logo",
+                 width: 96 %>
+  <div>
+    <%= link_to "Add new cocktail",
+                new_cocktail_path,
+                class: "mr-4 btn btn-main"%>
+    <%= link_to "Home",
+                root_path,
+                class: "btn btn-main"%>
+  </div>
 </div>
 
-<div class="container">
-  <div id="cocktail-list" class="mt-5 d-flex flex-wrap">
-    <% @cocktails.each do |cocktail| %>
-    <span class="p-3 my-2 card-cocktail"><%= link_to cocktail.name, cocktail_path(cocktail) %></span>
-    <% end %>
-  </div>  
-</div>
+<div class="container d-flex flex-wrap justify-content-between">
+  <% @cocktails.each do |cocktail| %>
+  <div class="card-cocktail"><%= link_to cocktail.name, cocktail_path(cocktail) %></div>
+  <% end %>
+</div>  

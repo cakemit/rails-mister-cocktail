@@ -3,15 +3,13 @@
                  alt: "1988 movie Cocktail logo",
                  width: 96 %>
   <div>
+    <%= link_to "Browse cocktails",
+                cocktails_path,
+                class: "mr-4 btn btn-main"%>
     <%= link_to "Add new cocktail",
                 new_cocktail_path,
-                class: "mr-4 btn btn-main"%>
-    <%= link_to "Home",
-                root_path,
                 class: "btn btn-main"%>
   </div>
 </div>
 
-<div class="container">
-  <%= render "form", cocktail: @cocktail %>
-</div>
+<div class="banner"></div>
